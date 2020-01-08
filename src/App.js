@@ -4,11 +4,20 @@
 import React, { Fragment, useState } from 'react';
 import Header from './component/Header'
 import Form from './component/Form'
+import Mensaje from './component/Mensaje'
+import Result from './component/Result'
 
 function App() {
   const [cantidad, guardarCantidad] = useState(0);
   const [plazo, guardarPlazo] = useState('');
   const [total, guardarTotal] = useState(0);
+  let componente;
+  if (total === 0) {
+    componente = <Mensaje />
+
+  } else {
+    componente = <Result />
+  }
 
   return (
     // <div className="App">
@@ -31,7 +40,9 @@ function App() {
           total={total}
           guardarTotal={guardarTotal}
         />
-        {(total === 0) ? null : <p>Total a pagar: ${total}</p>}
+        <div className="mensajes">
+          {componente}
+        </div>
       </div>
     </Fragment>
   );
