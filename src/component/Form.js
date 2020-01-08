@@ -17,9 +17,11 @@ const Form = (props) => {
     // Cuando el usuario hace submit
     const calcularPrestamo = e => {
         e.preventDefault();
+        console.log(':0 -> ', plazo);
         // Validar 
-        if (cantidad === 0 || plazo === '') {
+        if (cantidad === 0 || plazo === '' || plazo === 0) {
             guardarError(true);
+            console.log(':0');
             return;
         }
         // Eliminar el error previo
