@@ -10,8 +10,23 @@ const Form = ({ cantidad, guardarCantidad, plazo, guardarPlazo }) => {
         }
      */
 
+    //Definir state
+    const [error, guardarError] = useState(false)
+    // Cuando el usuario hace submit
+    const calcularPrestamo = e => {
+        e.preventDefault();
+        // Validar 
+        if (cantidad === 0 || plazo === '') {
+            guardarError(true);
+        } else {
+            guardarError(false);;
+        }
+        // Realizar Cotización
+    }
+
+
     return (
-        <form>
+        <form onSubmit={calcularPrestamo}>
             {cantidad}
             {plazo}
             <div className="row">
