@@ -8,6 +8,8 @@ import Form from './component/Form'
 function App() {
   const [cantidad, guardarCantidad] = useState(0);
   const [plazo, guardarPlazo] = useState('');
+  const [total, guardarTotal] = useState(0);
+
   return (
     // <div className="App">
     //   <Header />
@@ -26,7 +28,10 @@ function App() {
           guardarCantidad={guardarCantidad}
           plazo={plazo}
           guardarPlazo={guardarPlazo}
+          total={total}
+          guardarTotal={guardarTotal}
         />
+        {(total === 0) ? null : <p>Total a pagar: ${total}</p>}
       </div>
     </Fragment>
   );
