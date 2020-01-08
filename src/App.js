@@ -3,6 +3,7 @@
 
 import React, { Fragment } from 'react';
 import Header from './component/Header'
+import Form from './component/Form'
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <Header
         titulo='Cotizador de Prestamos'
       />
+      <div className="container">
+        <Form />
+      </div>
     </Fragment>
   );
 }
