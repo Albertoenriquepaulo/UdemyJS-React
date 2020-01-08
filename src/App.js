@@ -38,7 +38,6 @@ function App() {
     <Fragment>
       <Header
         titulo='Cotizador de Prestamos'
-        cantidad={cantidad}
       />
       <div className="container">
         <Form
@@ -46,7 +45,7 @@ function App() {
           guardarCantidad={guardarCantidad}
           plazo={plazo}
           guardarPlazo={guardarPlazo}
-          total={total}
+          //total={total} no es requerida esta variable
           guardarTotal={guardarTotal}
           guardarCargando={guardarCargando}
         />
