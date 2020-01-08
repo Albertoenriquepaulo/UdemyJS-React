@@ -6,13 +6,18 @@ import Header from './component/Header'
 import Form from './component/Form'
 import Mensaje from './component/Mensaje'
 import Result from './component/Result'
+import Spinner from './component/Spinner'
 
 function App() {
   const [cantidad, guardarCantidad] = useState(0);
   const [plazo, guardarPlazo] = useState('');
   const [total, guardarTotal] = useState(0);
+  const [cargando, guardarCargando] = useState(false);
+
   let componente;
-  if (total === 0) {
+  if (cargando) {
+    componente = <Spinner />
+  } else if (total === 0) {
     componente = <Mensaje />
 
   } else {
@@ -43,6 +48,7 @@ function App() {
           guardarPlazo={guardarPlazo}
           total={total}
           guardarTotal={guardarTotal}
+          guardarCargando={guardarCargando}
         />
         <div className="mensajes">
           {componente}
