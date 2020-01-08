@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = ({ cantidad, guardarCantidad }) => {
+const Form = ({ cantidad, guardarCantidad, plazo, guardarPlazo }) => {
     // Definir el State
 
     /**
@@ -13,6 +13,7 @@ const Form = ({ cantidad, guardarCantidad }) => {
     return (
         <form>
             {cantidad}
+            {plazo}
             <div className="row">
                 <div>
                     <label>Cantidad Prestamo</label>
@@ -27,6 +28,7 @@ const Form = ({ cantidad, guardarCantidad }) => {
                     <label>Plazo para Pagar</label>
                     <select
                         className="u-full-width"
+                        onChange={(e) => guardarPlazo(+e.target.value)}
                     >
                         <option value="">Seleccionar</option>
                         <option value="3">3 meses</option>

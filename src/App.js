@@ -7,6 +7,7 @@ import Form from './component/Form'
 
 function App() {
   const [cantidad, guardarCantidad] = useState(0);
+  const [plazo, guardarPlazo] = useState(0);
   return (
     // <div className="App">
     //   <Header />
@@ -23,6 +24,8 @@ function App() {
         <Form
           cantidad={cantidad}
           guardarCantidad={guardarCantidad}
+          plazo={plazo}
+          guardarPlazo={guardarPlazo}
         />
       </div>
     </Fragment>
