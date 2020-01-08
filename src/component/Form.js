@@ -25,7 +25,8 @@ const Form = ({ cantidad, guardarCantidad, plazo, guardarPlazo }) => {
         guardarError(false);
 
         // Realizar Cotización
-        calcularTotal(cantidad, plazo);
+        const total = calcularTotal(cantidad, plazo);
+        console.log(total);
 
     }
 
