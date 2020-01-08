@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
-const Header = ({ titulo }) => (
-    <h1>{titulo}</h1>
+const Header = ({ titulo, cantidad }) => (
+    <h1>{titulo} {cantidad}</h1>
 );
 
 

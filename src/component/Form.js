@@ -1,7 +1,18 @@
-import React from 'react';
-const Form = () => {
+import React, { useState } from 'react';
+
+const Form = ({ cantidad, guardarCantidad }) => {
+    // Definir el State
+
+    /**
+        const leerCantidad = (e) => {
+            guardarCantidad(+e.target.value);
+            console.log(guardarCantidad);
+        }
+     */
+
     return (
         <form>
+            {cantidad}
             <div className="row">
                 <div>
                     <label>Cantidad Prestamo</label>
@@ -9,6 +20,7 @@ const Form = () => {
                         className="u-full-width"
                         type="number"
                         placeholder="Ejemplo: 3000"
+                        onChange={(e) => guardarCantidad(+e.target.value)}
                     />
                 </div>
                 <div>

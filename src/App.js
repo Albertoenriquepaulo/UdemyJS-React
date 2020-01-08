@@ -1,11 +1,12 @@
 // Enlace del proyecto donde esta el contenido de index.css
 // https://gist.github.com/juanpablogdl/194c15d376391a67c46dd08817bf9ae4
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Header from './component/Header'
 import Form from './component/Form'
 
 function App() {
+  const [cantidad, guardarCantidad] = useState(0);
   return (
     // <div className="App">
     //   <Header />
@@ -16,9 +17,13 @@ function App() {
     <Fragment>
       <Header
         titulo='Cotizador de Prestamos'
+        cantidad={cantidad}
       />
       <div className="container">
-        <Form />
+        <Form
+          cantidad={cantidad}
+          guardarCantidad={guardarCantidad}
+        />
       </div>
     </Fragment>
   );
