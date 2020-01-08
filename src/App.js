@@ -13,8 +13,9 @@ function App() {
     // Sid escomentamos lo de arriba haria lo mismo que lo de Fragment
     // Pero para usar Fragment hay que incluirlo en el import
     <Fragment>
-      <Header />
-      <Header />
+      <Header
+        titulo='Cotizador de Prestamos'
+      />
     </Fragment>
   );
 }

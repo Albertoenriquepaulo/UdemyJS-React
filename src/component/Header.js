@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 
-function Header() {
+// function Header(props) {
+// La linea de arriba también serviria pero es mas elegante aplicar destructuring
+function Header({ titulo }) {
     return (
-        <h1>Header Component: Hi World</h1>
+        <Fragment>
+            <h1>{titulo}</h1>
+        </Fragment>
     );
 }
 
